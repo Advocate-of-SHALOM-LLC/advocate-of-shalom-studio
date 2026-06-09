@@ -6,28 +6,17 @@ import {
   FaLinkedinIn,
   FaYoutube,
   FaTiktok,
-  FaGithub,
-  FaPinterestP,
-  FaThreads,
-  FaBluesky,
-  FaMastodon,
-  FaGlobe,
   FaXTwitter,
+  FaGlobe,
 } from 'react-icons/fa6';
 
 const PLATFORMS = [
   { title: 'Facebook', value: 'facebook' },
   { title: 'Instagram', value: 'instagram' },
-  { title: 'X (Twitter)', value: 'twitter' },
+  { title: 'Twitter / X', value: 'twitter' },
   { title: 'LinkedIn', value: 'linkedin' },
   { title: 'YouTube', value: 'youtube' },
   { title: 'TikTok', value: 'tiktok' },
-  { title: 'GitHub', value: 'github' },
-  { title: 'Pinterest', value: 'pinterest' },
-  { title: 'Threads', value: 'threads' },
-  { title: 'Bluesky', value: 'bluesky' },
-  { title: 'Mastodon', value: 'mastodon' },
-  { title: 'Other', value: 'other' },
 ];
 
 const PLATFORM_ICON_MAP: Record<string, React.ComponentType> = {
@@ -37,12 +26,6 @@ const PLATFORM_ICON_MAP: Record<string, React.ComponentType> = {
   linkedin: FaLinkedinIn,
   youtube: FaYoutube,
   tiktok: FaTiktok,
-  github: FaGithub,
-  pinterest: FaPinterestP,
-  threads: FaThreads,
-  bluesky: FaBluesky,
-  mastodon: FaMastodon,
-  other: FaGlobe,
 };
 
 export default defineType({
@@ -50,59 +33,43 @@ export default defineType({
   title: 'Social Links',
   type: 'document',
   icon: FaGlobe,
+  description:
+    'One document per social profile. Add new platforms via the + button. Lower order numbers appear first in the footer.',
   fields: [
     defineField({
-      name: 'links',
-      title: ' ',
-      description: 'Add your social media profiles. These appear in the site footer.',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          name: 'socialLink',
-          fields: [
-            defineField({
-              name: 'platform',
-              title: 'Platform',
-              type: 'string',
-              options: {
-                list: PLATFORMS,
-                layout: 'dropdown',
-              },
-              validation: (Rule) => Rule.required(),
-            }),
-            defineField({
-              name: 'url',
-              title: 'Profile URL',
-              type: 'url',
-              validation: (Rule) =>
-                Rule.required().uri({ scheme: ['http', 'https'] }),
-            }),
-          ],
-          preview: {
-            select: { platform: 'platform', url: 'url' },
-            prepare({ platform, url }) {
-              const label =
-                PLATFORMS.find((p) => p.value === platform)?.title || platform || 'New link';
-              const IconComponent = PLATFORM_ICON_MAP[platform] || FaGlobe;
-              return {
-                title: label,
-                subtitle: url || 'No URL set',
-                media: () => createElement(IconComponent),
-              };
-            },
-          },
-        },
-      ],
+      name: 'platform',
+      title: 'Platform',
+      type: 'string',
+      options: {
+        list: PLATFORMS,
+        layout: 'dropdown',
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'url',
+      title: 'Profile URL',
+      type: 'url',
+      description: 'Full URL to the public profile page.',
+      validation: (Rule) => Rule.required().uri({ scheme: ['http', 'https'] }),
+    }),
+    defineField({
+      name: 'order',
+      title: 'Display Order',
+      type: 'number',
+      description: 'Lower numbers appear first.',
+      initialValue: 1,
     }),
   ],
   preview: {
-    select: { links: 'links' },
-    prepare({ links }) {
-      const count = Array.isArray(links) ? links.length : 0;
+    select: { platform: 'platform', url: 'url', order: 'order' },
+    prepare({ platform, url, order }: { platform?: string; url?: string; order?: number }) {
+      const label = PLATFORMS.find((p) => p.value === platform)?.title || platform || 'New link';
+      const Icon = PLATFORM_ICON_MAP[platform ?? ''] || FaGlobe;
       return {
-        title: 'Social Links',
-        subtitle: count ? `${count} link${count === 1 ? '' : 's'}` : 'No links added',
+        title: label,
+        subtitle: `${order != null ? `#${order} · ` : ''}${url || 'No URL set'}`,
+        media: () => createElement(Icon),
       };
     },
   },

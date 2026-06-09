@@ -56,12 +56,18 @@ const featureGrid = {
         fields: [
           defineField({ name: 'title', title: 'Title', type: 'string' }),
           defineField({ name: 'description', title: 'Description', type: 'text' }),
-          iconPickerField,
+          defineField({
+            name: 'icon',
+            title: 'Icon (Lucide name)',
+            type: 'string',
+            description:
+              "Lucide icon name (case-sensitive). Examples: Scale, Landmark, Network, Shield, Home, HeartPulse, Wallet. Falls back to a help icon if unrecognized.",
+          }),
         ],
         preview: {
-          select: { title: 'title', provider: 'icon.provider', name: 'icon.name' },
-          prepare({ title, provider, name }: any) {
-            return { title: title || 'Untitled', media: provider && name ? iconPreview({ provider, name }) : undefined };
+          select: { title: 'title', icon: 'icon' },
+          prepare({ title, icon }: any) {
+            return { title: title || 'Untitled', subtitle: icon || '' };
           },
         },
       }],
@@ -128,12 +134,18 @@ const processSteps = {
         fields: [
           defineField({ name: 'title', title: 'Step Title', type: 'string' }),
           defineField({ name: 'description', title: 'Step Description', type: 'text' }),
-          iconPickerField,
+          defineField({
+            name: 'icon',
+            title: 'Icon (Lucide name)',
+            type: 'string',
+            description:
+              "Lucide icon name (case-sensitive). Examples: Phone, Ear, ClipboardList, PersonStanding. Falls back to a help icon if unrecognized.",
+          }),
         ],
         preview: {
-          select: { title: 'title', provider: 'icon.provider', name: 'icon.name' },
-          prepare({ title, provider, name }: any) {
-            return { title: title || 'Untitled Step', media: provider && name ? iconPreview({ provider, name }) : undefined };
+          select: { title: 'title', icon: 'icon' },
+          prepare({ title, icon }: any) {
+            return { title: title || 'Untitled Step', subtitle: icon || '' };
           },
         },
       }],
@@ -325,6 +337,48 @@ const contactSection = {
   },
 };
 
+const videoSection = {
+  type: 'object',
+  name: 'videoSection',
+  title: 'Video Section',
+  fields: [
+    defineField({ name: 'heading', title: 'Heading', type: 'string' }),
+    defineField({ name: 'subheading', title: 'Subheading', type: 'string' }),
+    defineField({
+      name: 'videoUrl',
+      title: 'Video URL',
+      type: 'url',
+      description:
+        "Paste a YouTube or Vimeo link. Leave empty to show the 'Video coming soon' placeholder.",
+      validation: (Rule) =>
+        Rule.uri({ scheme: ['http', 'https'] }).optional(),
+    }),
+    defineField({
+      name: 'placeholderImage',
+      title: 'Placeholder image (optional)',
+      type: 'image',
+      description:
+        "Optional poster image shown until the video is added. Falls back to a neutral placeholder card if empty.",
+      options: { hotspot: true },
+    }),
+    defineField({
+      name: 'placeholderText',
+      title: 'Placeholder text (optional)',
+      type: 'string',
+      description: "Override the default 'Video coming soon' label.",
+    }),
+  ],
+  preview: {
+    select: { heading: 'heading', url: 'videoUrl' },
+    prepare({ heading, url }: { heading?: string; url?: string }) {
+      return {
+        title: heading || 'Video Section',
+        subtitle: url ? `🎥 ${url}` : 'No video URL yet',
+      };
+    },
+  },
+};
+
 const textContent = {
   type: 'object',
   name: 'textContent',
@@ -412,6 +466,7 @@ export default defineType({
         splitSection,
         contactSection,
         textContent,
+        videoSection,
         portfolioSection,
         teamProjectsSection,
       ],

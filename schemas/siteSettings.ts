@@ -14,9 +14,20 @@ export default defineType({
       validation: Rule => Rule.required(),
     }),
     defineField({
-      name: 'logo',
-      title: 'Site logo',
+      name: 'logoLight',
+      title: 'Logo — Light Mode',
       type: 'image',
+      description:
+        'Full color logo displayed on light backgrounds and in the header when light mode is active. Ideally a PNG with transparent background.',
+      options: { hotspot: false },
+    }),
+    defineField({
+      name: 'logoDark',
+      title: 'Logo — Dark Mode',
+      type: 'image',
+      description:
+        'Reversed or white version of the logo for dark backgrounds and dark mode header. Ideally a PNG with transparent background. Upload a white or light-colored variant for dark mode.',
+      options: { hotspot: false },
     }),
     defineField({
       name: 'ctaLabel',
