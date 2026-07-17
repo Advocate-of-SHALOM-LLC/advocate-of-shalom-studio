@@ -56,14 +56,14 @@ export default defineType({
       title: 'Phone',
       type: 'string',
       group: 'contact',
-      initialValue: '(970) 314-7095',
+      initialValue: '(970) 773-5907',
     }),
     defineField({
       name: 'contactEmail',
       title: 'Email',
       type: 'string',
       group: 'contact',
-      initialValue: 'eparker@advocateofshalom.com',
+      initialValue: 'navigator@advocateofshalom.com',
     }),
     defineField({
       name: 'contactHoursLabel',
@@ -110,14 +110,14 @@ export default defineType({
       title: 'Phone',
       type: 'string',
       group: 'map',
-      initialValue: '(970) 314-7095',
+      initialValue: '(970) 773-5907',
     }),
     defineField({
       name: 'mapEmail',
       title: 'Email',
       type: 'string',
       group: 'map',
-      initialValue: 'eparker@advocateofshalom.com',
+      initialValue: 'navigator@advocateofshalom.com',
     }),
     defineField({
       name: 'mapAppointmentNote',

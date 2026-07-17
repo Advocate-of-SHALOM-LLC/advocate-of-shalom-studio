@@ -33,7 +33,7 @@ export default defineType({
       type: 'array',
       of: [{ type: 'block' }],
       description:
-        "Full legal page content as rich text. Supports headings, paragraphs, and bullet lists. TODO: email/domain references currently use eparker@advocateofshalom.com and advocateofshalom.com — update to elyse@advocateofshalom.com / advocateofshalom.com after Google Workspace migration.",
+        "Full legal page content as rich text. Supports headings, paragraphs, and bullet lists.",
       validation: (Rule) => Rule.required(),
     }),
   ],

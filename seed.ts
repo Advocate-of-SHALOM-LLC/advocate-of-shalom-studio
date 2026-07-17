@@ -45,7 +45,7 @@ const documents = [
     "siteName": "Advocate Of SHALOM",
     "ctaLabel": "Get Started",
     "ctaUrl": "/contact",
-    "contactEmail": "eparker@advocateofshalom.com",
+    "contactEmail": "navigator@advocateofshalom.com",
     "contactPhone": "",
     "contactAddress": "",
     "copyrightText": "© 2026 Advocate Of SHALOM. All rights reserved."
@@ -140,15 +140,15 @@ const documents = [
     "textHeading": "We'd Love to Hear From You",
     "bodyContent": "Whether you're looking for support navigating a difficult situation or you're a professional interested in working alongside us — this is the right place to start. Fill out the form below and we'll get back to you as soon as possible.",
     "contactHeading": "Send Us a Message",
-    "contactPhone": "(970) 314-7095",
-    "contactEmail": "eparker@advocateofshalom.com",
+    "contactPhone": "(970) 773-5907",
+    "contactEmail": "navigator@advocateofshalom.com",
     "contactHoursLabel": "Monday – Friday, 9:00 AM – 5:00 PM MST",
     "contactWarmNote": "We read every message personally and respond within 1–2 business days.",
     "contactResponseNote": "We typically respond within 1–2 business days.",
     "mapHeading": "Find Us",
     "mapAddress": "536 31½ Rd #1\nGrand Junction, CO 81504",
-    "mapPhone": "(970) 314-7095",
-    "mapEmail": "eparker@advocateofshalom.com",
+    "mapPhone": "(970) 773-5907",
+    "mapEmail": "navigator@advocateofshalom.com",
     "mapAppointmentNote": "Visits are by appointment only. Please reach out using the form above or by phone to schedule a time.",
     "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3097.037004815798!2d-108.47091732349385!3d39.082854835739354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87471f2210b43f45%3A0xb0186204a94f7650!2s536%2031%201%2F2%20Rd%2C%20Grand%20Junction%2C%20CO%2081504!5e0!3m2!1sen!2sus!4v1780605704614!5m2!1sen!2sus"
   },
@@ -314,7 +314,7 @@ You have the right to:
 - Request deletion of your data
 - Opt out of marketing communications at any time
 
-To exercise these rights, contact us at eparker@advocateofshalom.com.
+To exercise these rights, contact us at navigator@advocateofshalom.com.
 
 ## Third-Party Services
 
@@ -331,7 +331,7 @@ We may update this Privacy Policy periodically. We will notify you of significan
 ## Contact Us
 
 Advocate Of SHALOM
-Email: eparker@advocateofshalom.com
+Email: navigator@advocateofshalom.com
 Website: advocateofshalom.com
     `)
   },
@@ -397,7 +397,7 @@ These Terms are governed by the laws of the State of Colorado, without regard to
 ## Contact Us
 
 Advocate Of SHALOM
-Email: eparker@advocateofshalom.com
+Email: navigator@advocateofshalom.com
 Website: advocateofshalom.com
     `)
   },
@@ -434,7 +434,7 @@ While we strive for full accessibility, some content may not yet meet all standa
 
 We welcome your feedback on the accessibility of advocateofshalom.com. If you experience any barriers, please contact us:
 
-Email: eparker@advocateofshalom.com
+Email: navigator@advocateofshalom.com
 
 We aim to respond to accessibility feedback within 2 business days.
 
