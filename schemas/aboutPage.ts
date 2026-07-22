@@ -7,99 +7,50 @@ export default defineType({
   type: 'document',
   icon: HiUser,
   groups: [
-    { name: 'toggle', title: 'Version Toggle', default: true },
-    { name: 'heroFull', title: 'Hero — Full Story (A)' },
-    { name: 'heroAlludes', title: 'Hero — Professional (B)' },
+    { name: 'hero', title: 'Hero', default: true },
     { name: 'story', title: 'Origin Story' },
     { name: 'team', title: 'Team Bio' },
-    { name: 'shared', title: 'Shared (Split + CTA)' },
+    { name: 'shared', title: 'Split + CTA' },
   ],
   fields: [
-    defineField({
-      name: 'storyVersion',
-      title: "Story version on About page",
-      type: 'string',
-      group: 'toggle',
-      description:
-        "Controls which version of Elyse's story appears on the About page. Version A includes personal history. Version B uses professional framing only. ⚠ Changes require publishing to go live.",
-      options: {
-        list: [
-          { title: 'Version A — Full Story', value: 'full' },
-          { title: 'Version B — Professional Framing', value: 'alludes' },
-        ],
-        layout: 'radio',
-      },
-      initialValue: 'alludes',
-      validation: (Rule) => Rule.required(),
-    }),
-
-    // Shared hero image — applies to both versions
+    // ─── Hero ─────────────────────────────────────────────────────────
     defineField({
       name: 'heroImage',
       title: 'Hero background image',
       type: 'image',
-      group: 'toggle',
+      group: 'hero',
       description:
-        'Shared across both Full and Professional versions. Sits behind the hero headline with a gradient overlay. Leave empty to use the default gradient.',
+        'Sits behind the hero headline with a gradient overlay. Leave empty to use the default gradient.',
       options: { hotspot: true },
     }),
     defineField({
       name: 'heroImageAlt',
       title: 'Hero image alt text',
       type: 'string',
-      group: 'toggle',
+      group: 'hero',
       description: 'Describe the image for screen readers. Leave empty if the image is purely decorative.',
     }),
-
-    // ─── Hero — Full Story ────────────────────────────────────────────
     defineField({
-      name: 'heroHeadlineFull',
-      title: 'Hero headline — Full Story (A)',
+      name: 'heroHeadline',
+      title: 'Hero headline',
       type: 'string',
-      group: 'heroFull',
-      initialValue: 'We Know This System From the Inside Out',
-    }),
-    defineField({
-      name: 'heroSubheadlineFull',
-      title: 'Hero subheadline — Full Story (A)',
-      type: 'text',
-      rows: 3,
-      group: 'heroFull',
-      initialValue:
-        "Advocate Of SHALOM was built by someone who lived it — and came back to make sure others don't have to face it alone.",
-    }),
-
-    // ─── Hero — Professional Framing ──────────────────────────────────
-    defineField({
-      name: 'heroHeadlineAlludes',
-      title: 'Hero headline — Professional (B)',
-      type: 'string',
-      group: 'heroAlludes',
+      group: 'hero',
       initialValue: 'We Show Up for People the System Has Forgotten',
     }),
     defineField({
-      name: 'heroSubheadlineAlludes',
-      title: 'Hero subheadline — Professional (B)',
+      name: 'heroSubheadline',
+      title: 'Hero subheadline',
       type: 'text',
       rows: 3,
-      group: 'heroAlludes',
+      group: 'hero',
       initialValue:
         'Advocate Of SHALOM exists because someone saw what happens when people have to navigate these systems alone — and decided to do something about it.',
     }),
 
     // ─── Origin Story ─────────────────────────────────────────────────
     defineField({
-      name: 'originStoryFull',
-      title: 'Origin story — Full Story (A)',
-      type: 'text',
-      rows: 12,
-      group: 'story',
-      initialValue:
-        "Elyse Parker spent 13 years in prison for a crime she didn't physically commit. She came out with nothing — no housing, no support, no roadmap. What followed was homelessness, relapse, and the very real possibility of losing everything that mattered. But she refused to let that be the end of the story. She rebuilt her life from the ground up. From shelter resident to case manager. From case manager to criminal defense advocate. Today she works alongside legal teams across Colorado, walking people through the same system she survived — this time as the one who knows the language, knows the agencies, and knows how to make it work for the people who need it most. Advocate Of SHALOM is the organization she wished had existed when she needed it.",
-    }),
-    defineField({
-      name: 'originStoryAlludes',
-      title: 'Origin story — Professional (B)',
+      name: 'originStory',
+      title: 'Origin story',
       type: 'text',
       rows: 12,
       group: 'story',
@@ -114,7 +65,7 @@ export default defineType({
       type: 'image',
       group: 'team',
       description:
-        'Shared across both versions. Renders on the left of the bio on desktop, above the bio on mobile. Use the hotspot to keep the face centered when cropped.',
+        'Renders on the left of the bio on desktop, above the bio on mobile. Use the hotspot to keep the face centered when cropped.',
       options: { hotspot: true },
     }),
     defineField({
@@ -125,17 +76,8 @@ export default defineType({
       description: 'Describe the portrait for screen readers (e.g. "Portrait of Elyse Parker").',
     }),
     defineField({
-      name: 'teamBioFull',
-      title: 'Team bio — Full Story (A)',
-      type: 'text',
-      rows: 8,
-      group: 'team',
-      initialValue:
-        "Elyse brings something most advocates can't: she's been inside the system as a client, survived what it does to people, and rebuilt her life on the other side. After 13 years of incarceration and the hard road that followed, she moved from shelter resident to case manager to criminal defense advocate — working alongside legal teams across Colorado. She holds two active state contracts and is currently building Advocate Of SHALOM to extend that work to the people who need it most but don't yet have access to it.",
-    }),
-    defineField({
-      name: 'teamBioAlludes',
-      title: 'Team bio — Professional (B)',
+      name: 'teamBio',
+      title: 'Team bio',
       type: 'text',
       rows: 8,
       group: 'team',
@@ -143,7 +85,7 @@ export default defineType({
         "Elyse has spent years working within Colorado's criminal justice and social services systems — first as a client, then as a case manager, and now as a criminal defense advocate working alongside legal teams statewide. She holds two active state contracts and brings a level of firsthand knowledge to this work that can't be taught in a classroom. She started Advocate Of SHALOM to make that knowledge available to the people who need it and can't afford to go without it.",
     }),
 
-    // ─── Split / Two Column block (same in both versions) ─────────────
+    // ─── Split / Two Column block ─────────────────────────────────────
     defineField({
       name: 'approachHeading',
       title: 'Split — left column heading',
@@ -177,7 +119,7 @@ export default defineType({
         "We work primarily with individuals transitioning out of incarceration — people navigating parole, reentry, DHS systems, and the practical reality of starting over in a world that moved on without them. We also partner with attorneys, social workers, and community agencies who need a dedicated advocate in their client's corner.",
     }),
 
-    // ─── Closing CTA block (same in both versions) ────────────────────
+    // ─── Closing CTA block ────────────────────────────────────────────
     defineField({
       name: 'ctaHeading',
       title: 'CTA — heading',
@@ -209,16 +151,8 @@ export default defineType({
     }),
   ],
   preview: {
-    select: { version: 'storyVersion' },
-    prepare({ version }: { version?: string }) {
-      const label: Record<string, string> = {
-        full: 'Showing: Version A — Full Story',
-        alludes: 'Showing: Version B — Professional Framing',
-      };
-      return {
-        title: 'About Page',
-        subtitle: label[version || 'alludes'],
-      };
+    prepare() {
+      return { title: 'About Page' };
     },
   },
 });
