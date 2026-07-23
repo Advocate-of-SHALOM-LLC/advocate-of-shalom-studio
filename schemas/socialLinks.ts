@@ -7,6 +7,7 @@ import {
   FaYoutube,
   FaTiktok,
   FaXTwitter,
+  FaGoogle,
   FaGlobe,
 } from 'react-icons/fa6';
 
@@ -17,6 +18,7 @@ const PLATFORMS = [
   { title: 'LinkedIn', value: 'linkedin' },
   { title: 'YouTube', value: 'youtube' },
   { title: 'TikTok', value: 'tiktok' },
+  { title: 'Google Business Profile', value: 'google' },
 ];
 
 const PLATFORM_ICON_MAP: Record<string, React.ComponentType> = {
@@ -26,6 +28,7 @@ const PLATFORM_ICON_MAP: Record<string, React.ComponentType> = {
   linkedin: FaLinkedinIn,
   youtube: FaYoutube,
   tiktok: FaTiktok,
+  google: FaGoogle,
 };
 
 export default defineType({
