@@ -141,11 +141,11 @@ const documents = [
     "contactWarmNote": "We read every message personally and respond within 1–2 business days.",
     "contactResponseNote": "We typically respond within 1–2 business days.",
     "mapHeading": "Find Us",
-    "mapAddress": "536 31½ Rd #1\nGrand Junction, CO 81504",
+    "mapAddress": "750 Main St, Ste. 105\nGrand Junction, CO 81501",
     "mapPhone": "(970) 773-5907",
     "mapEmail": "navigator@advocateofshalom.com",
     "mapAppointmentNote": "Visits are by appointment only. Please reach out using the form above or by phone to schedule a time.",
-    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3097.037004815798!2d-108.47091732349385!3d39.082854835739354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87471f2210b43f45%3A0xb0186204a94f7650!2s536%2031%201%2F2%20Rd%2C%20Grand%20Junction%2C%20CO%2081504!5e0!3m2!1sen!2sus!4v1780605704614!5m2!1sen!2sus"
+    "mapEmbedUrl": "https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1s750+Main+St+Ste+105,+Grand+Junction,+CO+81501"
   },
   {
     "_type": "servicesPage",

@@ -103,7 +103,7 @@ export default defineType({
       type: 'text',
       rows: 3,
       group: 'map',
-      initialValue: '536 31½ Rd #1\nGrand Junction, CO 81504',
+      initialValue: '750 Main St, Ste. 105\nGrand Junction, CO 81501',
     }),
     defineField({
       name: 'mapPhone',
