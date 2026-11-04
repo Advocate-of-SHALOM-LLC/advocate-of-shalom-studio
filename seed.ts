@@ -45,7 +45,7 @@ const documents = [
     "siteName": "Advocate Of SHALOM",
     "ctaLabel": "Get Started",
     "ctaUrl": "/contact",
-    "contactEmail": "navigator@advocateofshalom.com",
+    "contactEmail": "elyse@advocateofshalom.com",
     "contactPhone": "",
     "contactAddress": "",
     "copyrightText": "© 2026 Advocate Of SHALOM. All rights reserved."
@@ -136,14 +136,14 @@ const documents = [
     "bodyContent": "Whether you're looking for support navigating a difficult situation or you're a professional interested in working alongside us — this is the right place to start. Fill out the form below and we'll get back to you as soon as possible.",
     "contactHeading": "Send Us a Message",
     "contactPhone": "(970) 773-5907",
-    "contactEmail": "navigator@advocateofshalom.com",
+    "contactEmail": "elyse@advocateofshalom.com",
     "contactHoursLabel": "Monday – Friday, 9:00 AM – 5:00 PM MST",
     "contactWarmNote": "We read every message personally and respond within 1–2 business days.",
     "contactResponseNote": "We typically respond within 1–2 business days.",
     "mapHeading": "Find Us",
     "mapAddress": "750 Main St, Ste. 105\nGrand Junction, CO 81501",
     "mapPhone": "(970) 773-5907",
-    "mapEmail": "navigator@advocateofshalom.com",
+    "mapEmail": "elyse@advocateofshalom.com",
     "mapAppointmentNote": "Visits are by appointment only. Please reach out using the form above or by phone to schedule a time.",
     "mapEmbedUrl": "https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1s750+Main+St+Ste+105,+Grand+Junction,+CO+81501"
   },
@@ -309,7 +309,7 @@ You have the right to:
 - Request deletion of your data
 - Opt out of marketing communications at any time
 
-To exercise these rights, contact us at navigator@advocateofshalom.com.
+To exercise these rights, contact us at elyse@advocateofshalom.com.
 
 ## Third-Party Services
 
@@ -326,7 +326,7 @@ We may update this Privacy Policy periodically. We will notify you of significan
 ## Contact Us
 
 Advocate Of SHALOM
-Email: navigator@advocateofshalom.com
+Email: elyse@advocateofshalom.com
 Website: advocateofshalom.com
     `)
   },
@@ -392,7 +392,7 @@ These Terms are governed by the laws of the State of Colorado, without regard to
 ## Contact Us
 
 Advocate Of SHALOM
-Email: navigator@advocateofshalom.com
+Email: elyse@advocateofshalom.com
 Website: advocateofshalom.com
     `)
   },
@@ -429,7 +429,7 @@ While we strive for full accessibility, some content may not yet meet all standa
 
 We welcome your feedback on the accessibility of advocateofshalom.com. If you experience any barriers, please contact us:
 
-Email: navigator@advocateofshalom.com
+Email: elyse@advocateofshalom.com
 
 We aim to respond to accessibility feedback within 2 business days.
 

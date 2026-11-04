@@ -63,7 +63,7 @@ export default defineType({
       title: 'Email',
       type: 'string',
       group: 'contact',
-      initialValue: 'navigator@advocateofshalom.com',
+      initialValue: 'elyse@advocateofshalom.com',
     }),
     defineField({
       name: 'contactHoursLabel',
@@ -117,7 +117,7 @@ export default defineType({
       title: 'Email',
       type: 'string',
       group: 'map',
-      initialValue: 'navigator@advocateofshalom.com',
+      initialValue: 'elyse@advocateofshalom.com',
     }),
     defineField({
       name: 'mapAppointmentNote',

@@ -22,10 +22,10 @@ const REPLACEMENTS: Array<[string, string]> = [
   ['970-314-7095',   '(970) 773-5907'],
   ['970.314.7095',   '(970) 773-5907'],
   ['9703147095',     '9707735907'],       // JSON-LD digits-only form (unlikely in Sanity but safe)
-  // Email — all legacy addresses → navigator@
-  ['eparker@advocateofshalom.com', 'navigator@advocateofshalom.com'],
-  ['eparker@advocateofshalom.net', 'navigator@advocateofshalom.com'],
-  ['elyse@advocateofshalom.com',   'navigator@advocateofshalom.com'],
+  // Email — all legacy addresses → elyse@ (navigator@ retired Nov 2026)
+  ['eparker@advocateofshalom.com',   'elyse@advocateofshalom.com'],
+  ['eparker@advocateofshalom.net',   'elyse@advocateofshalom.com'],
+  ['navigator@advocateofshalom.com', 'elyse@advocateofshalom.com'],
 ];
 
 // Every doc type in the project. Add new ones here if the project grows.
