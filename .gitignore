@@ -4,3 +4,6 @@ dist/
 .env.*
 !.env.example
 *.log
+
+# pnpm only
+package-lock.json
