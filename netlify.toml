@@ -1,0 +1,13 @@
+# Sanity Studio on Netlify (studio.advocateofshalom.com).
+# Without this the site had no build step and published the raw repo, so
+# every page was a 404. The same Studio is also hosted by Sanity
+# (`pnpm exec sanity deploy`, advocate-of-shalom.sanity.studio).
+[build]
+  command = "pnpm exec sanity build dist --yes"
+  publish = "dist"
+
+# The Studio is a single-page app: every path loads index.html.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
